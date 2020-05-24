@@ -1,0 +1,1 @@
+/home/amador/.config/nvim/init.vim
