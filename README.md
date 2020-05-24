@@ -1,7 +1,7 @@
 # dotfiles
 
 
-Personal config files
+Personal config files for development
 
 Currently supports config files for:
 
