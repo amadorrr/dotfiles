@@ -3,27 +3,28 @@
 "       Amador  @amadxr
 "
 " Sections:
-"    -> Default settings to keep my sanity
-"    -> Plugins config
+"    -> Sets
+"    -> Plugins
+"    -> Lets
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Default settings to keep my sanity
+" => Sets
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 set guicursor=
 set relativenumber
+set nu
+set nohlsearch
 set hidden
 set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
-set nu
 set nowrap
-set smartcase
 set noswapfile
 set nobackup
 set undodir=~/.config/nvim/undodir
@@ -35,8 +36,9 @@ set noshowmode
 set updatetime=50
 set shortmess+=c
 set colorcolumn=80
+set completeopt=menuone,noinsert,noselect
+set signcolumn=yes
 highlight ColorColumn ctermbg=0 guibg=lightgrey
-let mapleader = " "
 com! W w
 map <up> <nop>
 map <down> <nop>
@@ -72,7 +74,7 @@ autocmd BufNewFile,BufRead *.blade.php set syntax=html
 autocmd BufNewFile,BufRead *.blade.php set filetype=html
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Plugins config
+" => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin("~/.config/nvim/plugged")
     Plug 'gruvbox-community/gruvbox'
@@ -80,7 +82,6 @@ call plug#begin("~/.config/nvim/plugged")
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
 	Plug 'scrooloose/nerdtree'
-	Plug 'ryanoasis/vim-devicons'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'mbbill/undotree'
     Plug 'sheerun/vim-polyglot'
@@ -92,6 +93,11 @@ call plug#begin("~/.config/nvim/plugged")
     Plug 'StanAngeloff/php.vim'
     Plug 'stephpy/vim-php-cs-fixer'
 call plug#end()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Lets
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader = " "
 
 " Colorscheme settings
 
